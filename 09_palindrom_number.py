@@ -8,6 +8,10 @@ class Solution:
         return rev_num
 
     def isPalindrome(self, x: int) -> bool:
+        # special case
+        if x < 0:
+            return False
+        
         if self._helperReverse(x) == x:
             return True
         else:
@@ -15,7 +19,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    num = 121
+    num = -121
     obj = Solution()
     # print(obj._helperReverse(num))
     print(obj.isPalindrome(num))
